@@ -1,0 +1,180 @@
+import { ArrowRight, Clock3, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { Button } from '@/components/button';
+import { GalleryCarousel } from '@/components/gallery-carousel';
+import { MenuSection } from '@/components/menu-section';
+import { ReviewsCarousel } from '@/components/reviews-carousel';
+import { SectionHeading } from '@/components/section-heading';
+import { site } from '@/lib/site';
+
+export default function HomePage() {
+  return (
+    <div className="pb-20">
+      <section id="home" className="scroll-mt-24 bg-hero-gradient">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-24">
+          <div className="flex flex-col justify-center space-y-6 animate-fadeUp">
+            <p className="inline-flex w-fit rounded-full bg-[#ffe8e2] px-4 py-2 text-sm font-semibold text-[#8e2826] ring-1 ring-[#dfb1a8]">
+              Bakers Hut | Red and cream bakery storefront
+            </p>
+            <h1 className="font-display text-5xl leading-none text-[#321112] md:text-6xl lg:text-7xl text-balance">
+              Warm bread, eggless cakes, and savory bites made for the neighborhood.
+            </h1>
+            <p className="max-w-2xl text-lg leading-8 text-[#6d5335]">{site.description}</p>
+            <div className="flex flex-wrap gap-3">
+              <Button href="/#menu">Browse menu <ArrowRight className="h-4 w-4" /></Button>
+              <Button href="/#gallery" variant="secondary">View gallery</Button>
+              <Button href={site.zomatoLink} variant="secondary">Zomato order</Button>
+              <Button href={`https://wa.me/${site.whatsapp}`} variant="secondary">WhatsApp order <MessageCircle className="h-4 w-4" /></Button>
+            </div>
+            <div className="grid gap-3 pt-4 sm:grid-cols-3">
+              {site.heroHighlights.map((item) => (
+                <div key={item.title} className="rounded-3xl border border-[#dfb1a8] bg-white/86 p-4 shadow-soft">
+                  <p className="font-semibold text-[#321112]">{item.title}</p>
+                  <p className="mt-2 text-sm leading-6 text-[#6e3d34]">{item.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="relative">
+            <div className="absolute inset-0 -translate-x-3 translate-y-3 rounded-[2rem] bg-[#d15c53]" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-[#dfb1a8] bg-[#fffaf8] p-5 shadow-glow">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-[1.5rem] bg-[#ffe7df] p-5">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8e2826]">Storefront feeling</p>
+                  <div className="mt-5 aspect-[4/5] rounded-[1.5rem] border border-[#dfb1a8] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.95),rgba(209,92,83,0.18)),linear-gradient(135deg,#fff8f4,#f3c1b5)]" />
+                </div>
+                <div className="flex flex-col gap-4">
+                  <div className="rounded-[1.5rem] bg-[#fff1eb] p-4">
+                    <p className="text-sm font-semibold text-[#321112]">Opening hours</p>
+                    <div className="mt-3 space-y-2 text-sm text-[#6e3d34]">
+                      {site.hours.map((slot) => (
+                        <div key={slot.day} className="flex items-center justify-between gap-3">
+                          <span>{slot.day}</span>
+                          <span>{slot.time}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="rounded-[1.5rem] bg-[#8e2826] p-4 text-white">
+                    <p className="font-semibold">Quick actions</p>
+                    <div className="mt-4 space-y-3 text-sm text-white/86">
+                      <p className="flex items-center gap-2"><Phone className="h-4 w-4" /> Call: {site.phone}</p>
+                      <p className="flex items-center gap-2"><MessageCircle className="h-4 w-4" /> WhatsApp ordering</p>
+                      <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Google Maps directions</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-16 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="About"
+          title="A neighborhood bakery with a simple story and a clear menu"
+          description={site.about.intro}
+        />
+        <div className="mt-8 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="rounded-[2rem] border border-[#dfb1a8] bg-white p-6 shadow-soft">
+            <p className="font-display text-3xl text-[#321112]">Family story</p>
+            <p className="mt-4 leading-8 text-[#6e3d34]">{site.about.story}</p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {site.about.features.map((feature) => (
+                <div key={feature} className="rounded-2xl bg-[#fff1eb] px-4 py-3 text-sm font-semibold text-[#7d1f1c]">
+                  {feature}
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 leading-7 text-[#6e3d34]">{site.about.focus}</p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {site.featuredProducts.map((product) => (
+              <article key={product.name} className="rounded-[1.75rem] border border-[#dfb1a8] bg-[#fffaf8] p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-glow">
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#8e2826]">{product.category}</p>
+                <h3 className="mt-3 font-display text-3xl text-[#321112]">{product.name}</h3>
+                <p className="mt-3 leading-7 text-[#6e3d34]">{product.description}</p>
+                <p className="mt-6 text-base font-semibold text-[#9f2323]">{product.price}</p>
+              </article>
+          ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" className="scroll-mt-24 bg-[#ffe8e2]">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Menu"
+            title="Fresh breads, cakes, pastries, and savory bites"
+            description="Browse the menu by category to get straight to what you want."
+          />
+          <MenuSection />
+        </div>
+      </section>
+
+      <section id="gallery" className="scroll-mt-24 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Gallery"
+          title="Recent bakery photos from the shop"
+          description="A moving gallery of the storefront and display items."
+        />
+        <div className="mt-8">
+          <GalleryCarousel />
+        </div>
+      </section>
+
+      <section id="reviews" className="scroll-mt-24 bg-[#fff8f4]">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+          <div className="space-y-5">
+            <SectionHeading
+              eyebrow="Reviews"
+              title="What customers say about Bakers Hut"
+              description="A static set of real Google reviews presented in a moving carousel."
+            />
+            <ReviewsCarousel />
+          </div>
+          <div id="visit" className="rounded-[2rem] border border-[#dfb1a8] bg-[#fffaf8] p-6 shadow-soft scroll-mt-24">
+            <SectionHeading
+              eyebrow="Visit"
+              title="Visit us or place an order"
+              description="Call, WhatsApp, Zomato, or get directions without any extra friction."
+            />
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-3xl bg-[#fff1eb] p-5">
+                <MapPin className="h-5 w-5 text-[#9f2323]" />
+                <p className="mt-4 font-semibold text-[#321112]">Google Maps</p>
+                <p className="mt-2 text-sm leading-6 text-[#6e3d34]">Use directions to reach the shop at Jharoda Kalan.</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <Button href={site.mapDirectionsUrl} variant="secondary">Open directions</Button>
+                </div>
+              </div>
+              <div className="rounded-3xl bg-[#8e2826] p-5 text-white">
+                <Clock3 className="h-5 w-5 text-[#ffd8d1]" />
+                <p className="mt-4 font-semibold">Ordering</p>
+                <p className="mt-2 text-sm leading-6 text-white/82">Call, WhatsApp, or Zomato without going through a contact form.</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <Button href={`tel:${site.phone.replace(/\s+/g, '')}`} variant="secondary">Call now</Button>
+                  <Button href={`https://wa.me/${site.whatsapp}`} variant="ghost">WhatsApp</Button>
+                </div>
+              </div>
+            </div>
+            <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-dashed border-[#dfb1a8] bg-[#fff2ec] p-4 text-sm leading-6 text-[#6e3d34]">
+              {site.address}
+            </div>
+          </div>
+        </div>
+        <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+          <div className="overflow-hidden rounded-[1.5rem] border border-[#dfb1a8] bg-white shadow-soft">
+            <iframe
+              title="Google Maps embed"
+              src={site.mapEmbedUrl}
+              className="h-[360px] w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
