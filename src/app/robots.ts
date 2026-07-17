@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://bakers-hut.example/sitemap.xml",
+    sitemap: "https://bakershutcake.com/sitemap.xml",
   };
 }
