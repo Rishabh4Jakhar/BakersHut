@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ArrowRight, Clock3, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { Button } from '@/components/button';
 import { GalleryCarousel } from '@/components/gallery-carousel';
@@ -10,8 +11,8 @@ export default function HomePage() {
   return (
     <div className="pb-20">
       <section id="home" className="scroll-mt-24 bg-hero-gradient">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-24">
-          <div className="flex flex-col justify-center space-y-6 animate-fadeUp">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 lg:px-8 lg:py-24">
+          <div className="min-w-0 flex flex-col justify-center space-y-6 animate-fadeUp">
             <p className="inline-flex w-fit rounded-full bg-[#ffe8e2] px-4 py-2 text-sm font-semibold text-[#8e2826] ring-1 ring-[#dfb1a8]">
               Bakers Hut | Red and cream bakery storefront
             </p>
@@ -34,15 +35,24 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-          <div className="relative">
-            <div className="absolute inset-0 -translate-x-3 translate-y-3 rounded-[2rem] bg-[#d15c53]" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-[#dfb1a8] bg-[#fffaf8] p-5 shadow-glow">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[1.5rem] bg-[#ffe7df] p-5">
+          <div className="relative min-w-0 self-start px-2 pb-2 sm:px-3 sm:pb-3 lg:self-center">
+            <div className="absolute inset-x-2 inset-y-2 translate-x-2 translate-y-2 rounded-[2rem] bg-[#d15c53] sm:inset-x-3 sm:inset-y-3 sm:translate-x-3 sm:translate-y-3" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-[#dfb1a8] bg-[#fffaf8] p-3 shadow-glow sm:p-5">
+              <div className="grid gap-4 min-[480px]:grid-cols-2">
+                <div className="min-w-0 rounded-[1.5rem] bg-[#ffe7df] p-4 sm:p-5">
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8e2826]">Storefront feeling</p>
-                  <div className="mt-5 aspect-[4/5] rounded-[1.5rem] border border-[#dfb1a8] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.95),rgba(209,92,83,0.18)),linear-gradient(135deg,#fff8f4,#f3c1b5)]" />
+                  <div className="relative mt-4 aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-[#dfb1a8] bg-[#f3c1b5]">
+                    <Image
+                      src={site.images.storefront}
+                      alt="Bakery storefront placeholder"
+                      fill
+                      priority
+                      sizes="(max-width: 479px) calc(100vw - 4.5rem), (max-width: 1024px) 42vw, 360px"
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="min-w-0 flex flex-col gap-4">
                   <div className="rounded-[1.5rem] bg-[#fff1eb] p-4">
                     <p className="text-sm font-semibold text-[#321112]">Opening hours</p>
                     <div className="mt-3 space-y-2 text-sm text-[#6e3d34]">
@@ -125,7 +135,7 @@ export default function HomePage() {
 
       <section id="reviews" className="scroll-mt-24 bg-[#fff8f4]">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-          <div className="space-y-5">
+          <div className="min-w-0 space-y-5">
             <SectionHeading
               eyebrow="Reviews"
               title="What customers say about Bakers Hut"
@@ -133,7 +143,7 @@ export default function HomePage() {
             />
             <ReviewsCarousel />
           </div>
-          <div id="visit" className="rounded-[2rem] border border-[#dfb1a8] bg-[#fffaf8] p-6 shadow-soft scroll-mt-24">
+          <div id="visit" className="min-w-0 rounded-[2rem] border border-[#dfb1a8] bg-[#fffaf8] p-6 shadow-soft scroll-mt-24">
             <SectionHeading
               eyebrow="Visit"
               title="Visit us or place an order"

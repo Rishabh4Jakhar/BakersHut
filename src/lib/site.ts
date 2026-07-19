@@ -1,3 +1,19 @@
+export type MenuVariant = {
+  label: string;
+  price: string;
+};
+
+export type MenuItem = {
+  name: string;
+  category: string;
+  price: string;
+  tags: string[];
+  // Optional: add a local path such as '/images/vanilla-cake.jpg' or an approved remote URL.
+  imageUrl?: string;
+  // Optional: each choice gets its own price, for example 1 Pound / 2 Pound.
+  variants?: MenuVariant[];
+};
+
 export const site = {
   name: 'Bakers Hut',
   tagline: 'Neighborhood bakery in Jharoda Kalan for eggless cakes, breads, and savory bites.',
@@ -10,6 +26,17 @@ export const site = {
   mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.991211421745!2d76.9658242!3d28.6300255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0f13038898bd%3A0x6fac295ee5de299f!2sBakers%20Hut%20-%20Bakery%20and%20Cake%20Shop!5e0!3m2!1sen!2sin!4v1784183283139!5m2!1sen!2sin',
   zomatoLink: 'https://www.zomato.com/ncr/bakers-hut-najafgarh-new-delhi',
   instagram: 'https://www.instagram.com/bakershut72/',
+  // Replace these URLs with files from /public whenever your bakery photos are ready.
+  images: {
+    storefront:
+      'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=85',
+    cake:
+      'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80',
+    pastry:
+      'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80',
+    savory:
+      'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80',
+  },
   hours: [
     { day: 'Mon - Sun', time: '10:00 AM - 10:00 PM' },
   ],
@@ -82,6 +109,10 @@ export const site = {
       category: 'Cakes',
       price: '₹270',
       tags: ['1 Pound', 'Eggless'],
+      variants: [
+        { label: '1 Pound', price: '₹270' },
+        { label: '2 Pound', price: '₹520' },
+      ],
     },
     {
       name: 'Pineapple Cake',
@@ -536,8 +567,6 @@ export const site = {
     },
   ],
 };
-
-export type MenuItem = (typeof site.menuItems)[number];
 
 export type GalleryItem = (typeof site.gallery)[number];
 

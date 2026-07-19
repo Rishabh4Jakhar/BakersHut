@@ -26,12 +26,12 @@ export function ReviewsCarousel() {
   }, [emblaApi, reviews.length]);
 
   return (
-    <div className="rounded-[2rem] border border-[#dfb1a8] bg-white p-4 shadow-soft">
+    <div className="min-w-0 overflow-hidden rounded-[2rem] border border-[#dfb1a8] bg-white p-3 shadow-soft sm:p-4">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex touch-pan-y">
           {reviews.map((review) => (
-            <div key={review.name + review.quote} className="min-w-0 flex-[0_0_100%] px-2 sm:flex-[0_0_92%]">
-              <article className="rounded-[1.75rem] border border-[#dfb1a8] bg-[#fffaf8] p-6 shadow-soft">
+            <div key={review.name + review.quote} className="min-w-0 flex-[0_0_100%] px-1 sm:flex-[0_0_92%] sm:px-2">
+              <article className="min-w-0 rounded-[1.75rem] border border-[#dfb1a8] bg-[#fffaf8] p-4 shadow-soft sm:p-6">
                 <div className="flex items-center gap-1 text-[#9f2323]">
                   {Array.from({ length: 5 }).map((_, index) => (
                     <Star key={index} className="h-4 w-4 fill-current" />
