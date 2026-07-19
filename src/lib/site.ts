@@ -14,7 +14,7 @@ import blueberryCakeImage from '@/assets/blueberry_cake.jpeg';
 import butterscotchPastryImage from '@/assets/butterscotch_pastry.jpeg';
 import cheesePaneerSurpriseBurgerImage from '@/assets/cheese_paneer_surprise.jpeg';
 import cheeseSurpriseBurgerImage from '@/assets/cheese_surprise.jpeg';
-import chilliPaneerDryImage from '@/assets/chilli_paneer.jpeg';
+import chilliPaneerImage from '@/assets/chilli_paneer.jpeg';
 import chilliPotatoImage from '@/assets/chilli_potato.jpeg';
 import chocolatePastryImage from '@/assets/chocolate_pastry.jpeg';
 import cornPowerPizzaImage from '@/assets/corn_power.jpeg';
@@ -22,6 +22,7 @@ import frenchFriesImage from '@/assets/french_fries.jpeg';
 import honeyChilliPotatoImage from '@/assets/honey_chilli_potato.jpeg';
 import italianClassicPizzaImage from '@/assets/italian_classic.jpeg';
 import margrettaPizzaImage from '@/assets/margretta.jpeg';
+import mushroomImage from '@/assets/mushroom_chilli.jpeg';
 import onionCrunchPizzaImage from '@/assets/onion_crunch.jpeg';
 import paneerFunBurgerImage from '@/assets/paneer_fun.jpeg';
 import paneerHakkaNoodlesImage from '@/assets/paneer_hakka.jpeg';
@@ -29,7 +30,7 @@ import paneerMasalaPizzaImage from '@/assets/paneer_masala.jpeg';
 import paneerMomosImage from '@/assets/paneer_momos.jpeg';
 import paneerNoodlesImage from '@/assets/paneer_noodles.jpeg';
 import paneerPunchBurgerImage from '@/assets/paneer_punch.jpeg';
-import paneerSchezwanImages from '@/assets/paneer_schezwan.jpeg';
+import paneerSchezwanImage from '@/assets/paneer_schezwan.jpeg';
 import paneerSingaporeNoodlesImage from '@/assets/paneer_singapore_noodles.jpeg';
 import periPeriFriesImage from '@/assets/peri_peri.jpeg';
 import pineappleCakeImage from '@/assets/pineapple_cake.jpeg';
@@ -47,8 +48,10 @@ import vegManchurianImage from '@/assets/veg_manchu.jpeg';
 import vegMomosImage from '@/assets/veg_momos.jpeg';
 import vegNoodlesImage from '@/assets/veg_noodles.jpeg';
 import vegPowerPizzaImage from '@/assets/veg_power.jpeg';
+import vegSandwichImage from '@/assets/veg_sandwich.jpeg';
 import vegSchezwanNoodlesImage from '@/assets/veg_schezwan.jpeg';
 import vegSingaporeNoodlesImage from '@/assets/veg_singapore_noodles.jpeg';
+
 
 export type MenuVariant = {
   label: string;
@@ -172,6 +175,7 @@ export const site = {
       category: 'Cakes',
       price: '₹300',
       tags: ['Eggless'],
+      imageUrl: pineappleCakeImage,
     },
     {
       name: 'Butter Scotch Cake',
@@ -185,12 +189,14 @@ export const site = {
       category: 'Cakes',
       price: '₹320',
       tags: ['Eggless'],
+      imageUrl: strawberryCakeImage,
     },
     {
       name: 'Blueberry Cake',
       category: 'Cakes',
       price: '₹320',
       tags: ['Eggless'],
+      imageUrl: blueberryCakeImage,
     },
     {
       name: 'Black Forest Cake',
@@ -232,36 +238,42 @@ export const site = {
       category: 'Cakes',
       price: '₹420',
       tags: ['Special', 'Eggless'],
+      imageUrl: truffleCakeImage,
     },
     {
       name: 'Pineapple Pastry',
       category: 'Pastries',
       price: '₹30',
       tags: ['Eggless'],
+      imageUrl: pineapplePastryImage,
     },
     {
       name: 'Butterscotch Pastry',
       category: 'Pastries',
       price: '₹30',
       tags: ['Eggless'],
+      imageUrl: butterscotchPastryImage,
     },
     {
       name: 'Chocolate Pastry',
       category: 'Pastries',
       price: '₹40',
       tags: ['Eggless'],
+      imageUrl: chocolatePastryImage,
     },
     {
       name: 'Red Velvet Pastry',
       category: 'Pastries',
       price: '₹50',
-      tags: ['Eggless'],  
+      tags: ['Eggless'], 
+      imageUrl: redVelvetPastryImage, 
     },
     {
       name: 'Truffle Pastry',
       category: 'Pastries',
       price: '₹60',
       tags: ['Eggless'],  
+      imageUrl: trufflePastryImage
     },
     {
       name: 'Margretta',
@@ -272,6 +284,7 @@ export const site = {
         { label: 'Small', price: '₹70' },
         { label: 'Medium', price: '₹140' },
       ],
+      imageUrl: margrettaPizzaImage,
     },
     {
       name: 'Onion Crunch',
@@ -282,6 +295,7 @@ export const site = {
         { label: 'Small', price: '₹80' },
         { label: 'Medium', price: '₹160' },
       ],
+      imageUrl: onionCrunchPizzaImage,
     },    
     {
       name: 'Corn Power',
@@ -292,6 +306,7 @@ export const site = {
         { label: 'Small', price: '₹80' },
         { label: 'Medium', price: '₹160' },
       ],
+      imageUrl: cornPowerPizzaImage,
     },    
     {
       name: 'Veg. Power',
@@ -302,6 +317,7 @@ export const site = {
         { label: 'Small', price: '₹90' },
         { label: 'Medium', price: '₹180' },
       ],
+      imageUrl: vegPowerPizzaImage,
     },    
     {
       name: 'Paneer Masala',
@@ -312,6 +328,7 @@ export const site = {
         { label: 'Small', price: '₹100' },
         { label: 'Medium', price: '₹200' },
       ],
+      imageUrl: paneerMasalaPizzaImage,
     },
     {
       name: 'Veg. Delight',
@@ -322,6 +339,7 @@ export const site = {
         { label: 'Small', price: '₹110' },
         { label: 'Medium', price: '₹210' },
       ],
+      imageUrl: vegDelightPizzaImage,
     },
     {
       name: 'Italian Classic',
@@ -332,48 +350,56 @@ export const site = {
         { label: 'Small', price: '₹110' },
         { label: 'Medium', price: '₹220' },
       ],
+      imageUrl: italianClassicPizzaImage,
     },    
     {
       name: 'Classic Aloo Tikki',
       category: 'Burgers and Sandwiches',
       price: '₹40',
       tags: [],
+      imageUrl: alooTikkiBurgerImage,
     },
     {
       name: 'Cheese Surprise',
       category: 'Burgers and Sandwiches',
       price: '₹50',
       tags: [],
+      imageUrl: cheeseSurpriseBurgerImage,
     },        
     {
       name: 'Paneer Fun',
       category: 'Burgers and Sandwiches',
       price: '₹60',
       tags: [],
+      imageUrl: paneerFunBurgerImage,
     },    
     {
       name: 'Cheese Paneer Surprise',
       category: 'Burgers and Sandwiches',
       price: '₹70',
       tags: [],
+      imageUrl: cheesePaneerSurpriseBurgerImage,
     },    
     {
       name: 'Classic Veg.',
       category: 'Burgers and Sandwiches',
       price: '₹30',
       tags: [],
+      imageUrl: vegSandwichImage,
     },    
     {
       name: 'Paneer Punch',
       category: 'Burgers and Sandwiches',
       price: '₹60',
       tags: [],
+      imageUrl: paneerPunchBurgerImage,
     },    
     {
       name: 'Veg. Kick',
       category: 'Burgers and Sandwiches',
       price: '₹80',
       tags: [],
+      imageUrl: vegKickBurgerImage,
     },    
     {
       name: 'Veg Momos Steam',
@@ -384,6 +410,7 @@ export const site = {
         { label: 'Half', price: '₹50' },
         { label: 'Full', price: '₹80' },
       ],
+      imageUrl: vegMomosImage,
     },    
     {
       name: 'Veg Butter Momos Steam',
@@ -394,6 +421,7 @@ export const site = {
         { label: 'Half', price: '₹60' },
         { label: 'Full', price: '₹90' },
       ],
+      imageUrl: vegMomosImage,
     },        
     {
       name: 'Paneer Momos Steam',
@@ -404,6 +432,7 @@ export const site = {
         { label: 'Half', price: '₹60' },
         { label: 'Full', price: '₹90' },
       ],
+      imageUrl: paneerMomosImage,
     },        
     {
       name: 'Veg Momos Fried',
@@ -474,6 +503,7 @@ export const site = {
         { label: 'Half', price: '₹60' },
         { label: 'Full', price: '₹90' },
       ],
+      imageUrl: vegNoodlesImage,
     },        
     {
       name: 'Paneer Noodles',
@@ -484,6 +514,7 @@ export const site = {
         { label: 'Half', price: '₹80' },
         { label: 'Full', price: '₹120' },
       ],
+      imageUrl: paneerNoodlesImage,
     },           
     {
       name: 'Singapuri Noodles Veg',
@@ -494,6 +525,7 @@ export const site = {
         { label: 'Half', price: '₹70' },
         { label: 'Full', price: '₹110' },
       ],
+      imageUrl: vegSingaporeNoodlesImage,
     },           
     {
       name: 'Singapuri Noodles Paneer',
@@ -504,6 +536,7 @@ export const site = {
         { label: 'Half', price: '₹80' },
         { label: 'Full', price: '₹120' },
       ],
+      imageUrl: paneerSingaporeNoodlesImage,
     },           
     {
       name: 'Hakka Noodles Veg',
@@ -514,6 +547,7 @@ export const site = {
         { label: 'Half', price: '₹80' },
         { label: 'Full', price: '₹120' },
       ],
+      imageUrl: vegHakkaNoodlesImage,
     },            
     {
       name: 'Hakka Noodles Paneer',
@@ -524,6 +558,7 @@ export const site = {
         { label: 'Half', price: '₹90' },
         { label: 'Full', price: '₹130' },
       ],
+      imageUrl: paneerHakkaNoodlesImage,
     },               
     {
       name: 'Schezwan Noodles Veg',
@@ -534,6 +569,7 @@ export const site = {
         { label: 'Half', price: '₹80' },
         { label: 'Full', price: '₹120' },
       ],
+      imageUrl: vegSchezwanNoodlesImage,
     },           
     {
       name: 'Schezwan Noodles Paneer',
@@ -544,6 +580,7 @@ export const site = {
         { label: 'Half', price: '₹90' },
         { label: 'Full', price: '₹130' },
       ],
+      imageUrl: paneerSchezwanImage,
     },            
     {
       name: 'Chilli Garlic Noodles Veg',
@@ -554,6 +591,7 @@ export const site = {
         { label: 'Half', price: '₹90' },
         { label: 'Full', price: '₹120' },
       ],
+      imageUrl: vegChilliGarlicNoodlesImage,
     },            
     {
       name: 'Veg Fried Rice',
@@ -644,6 +682,7 @@ export const site = {
         { label: 'Half', price: '₹50' },
         { label: 'Full', price: '₹90' },
       ],
+      imageUrl: frenchFriesImage,
     },
     {
       name: 'Peri Peri Fries',
@@ -654,6 +693,7 @@ export const site = {
         { label: 'Half', price: '₹70' },
         { label: 'Full', price: '₹100' },
       ],
+      imageUrl: periPeriFriesImage,
     },            
     {
       name: 'Chilli Potato',
@@ -664,6 +704,7 @@ export const site = {
         { label: 'Half', price: '₹70' },
         { label: 'Full', price: '₹110' },
       ],
+      imageUrl: chilliPotatoImage,
     },           
     {
       name: 'Honey Chilli Potato',
@@ -674,6 +715,7 @@ export const site = {
         { label: 'Half', price: '₹90' },
         { label: 'Full', price: '₹130' },
       ],
+      imageUrl: honeyChilliPotatoImage,
     },           
     {
       name: 'Veg Manchurian Dry',
@@ -684,6 +726,7 @@ export const site = {
         { label: 'Half', price: '₹80' },
         { label: 'Full', price: '₹140' },
       ],
+      imageUrl: vegManchurianImage,
     },           
     {
       name: 'Paneer Manchurian Gravy',
@@ -704,6 +747,7 @@ export const site = {
         { label: 'Half', price: '₹100' },
         { label: 'Full', price: '₹150' },
       ],
+      imageUrl: chilliPaneerImage,
     },           
     {
       name: 'Chilli Paneer Gravy',
@@ -724,6 +768,7 @@ export const site = {
         { label: 'Half', price: '₹90' },
         { label: 'Full', price: '₹140' },
       ],
+      imageUrl: mushroomImage,
     },           
     {
       name: 'Chilli Mushroom Gravy',
@@ -744,6 +789,7 @@ export const site = {
         { label: 'Half', price: '₹50' },
         { label: 'Full', price: '₹90' },
       ],
+      imageUrl: springRollImage,
     },            
     {
       name: 'Paneer Spring Roll',
