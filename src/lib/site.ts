@@ -137,12 +137,14 @@ export const site = {
   featuredProducts: [
     {
       name: 'Rasmalai Cake',
+      imageUrl: rasmalaiCakeImage,
       category: 'Cakes',
       price: 'From ₹500',
       description: 'A delicious eggless cake made with fresh rasmalai and topped with nuts, best-seller and loved by customers.',
     },
     {
       name: 'Italian Classic Pizza',
+      imageUrl: italianClassicPizzaImage,
       category: 'Pizzas',
       price: 'From ₹120',
       description: 'A delicious pizza made with onion, corn, olive, paprika and a crispy crust.',
