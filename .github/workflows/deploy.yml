@@ -21,6 +21,11 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Verify latest code
+        run: |
+          git log --oneline -1
+          grep -n "More for Every Occasion" app/page.tsx || true
+
       - name: Build Website
         run: npm run build
 
