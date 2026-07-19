@@ -55,6 +55,10 @@ import paneerFriedRiceImage from '@/assets/paneer_fried_rice.jpeg';
 import paneerSingaporeFriedRiceImage from '@/assets/paneer_singapore_rice.jpeg';
 import vegFriedRiceImage from '@/assets/veg_fried_rice.jpeg';
 import vegSingaporeFriedRiceImage from '@/assets/veg_singapore_rice.jpeg';
+import chocovanillaCakeImage from '@/assets/chocovanilla_cake.jpeg';
+import fruitCakeImage from '@/assets/fruit_cake.jpeg';
+import hazelnutCakeImage from '@/assets/hazelnut_cake.jpeg';
+import rasmalaiCakeImage from '@/assets/rasmalai_cake.jpeg';
 
 export type MenuVariant = {
   label: string;
@@ -169,7 +173,7 @@ export const site = {
       price: '₹270',
       tags: ['Eggless'],
       variants: [
-        { label: '1 Pound', price: '₹270' },
+        { label: '1 Pound', price: '₹290' },
         { label: '2 Pound', price: '₹520' },
       ],
     },
@@ -181,7 +185,7 @@ export const site = {
       imageUrl: pineappleCakeImage,
       variants: [
         { label: '1 Pound', price: '₹300' },
-        { label: '2 Pound', price: '₹580' },
+        { label: '2 Pound', price: '₹550' },
       ],
     },
     {
@@ -192,7 +196,7 @@ export const site = {
       imageUrl: butterscotchCakeImage,
       variants: [
         { label: '1 Pound', price: '₹320' },
-        { label: '2 Pound', price: '₹620' },
+        { label: '2 Pound', price: '₹600' },
       ],
     },
     {
@@ -203,7 +207,7 @@ export const site = {
       imageUrl: strawberryCakeImage,
       variants: [
         { label: '1 Pound', price: '₹320' },
-        { label: '2 Pound', price: '₹620' },
+        { label: '2 Pound', price: '₹600' },
       ],
     },
     {
@@ -214,9 +218,19 @@ export const site = {
       imageUrl: blueberryCakeImage,
       variants: [
         { label: '1 Pound', price: '₹320' },
-        { label: '2 Pound', price: '₹620' },
+        { label: '2 Pound', price: '₹600' },
       ],
     },
+    {
+      name: 'Mango Cake',
+      category: 'Cakes',
+      price: '₹320',
+      tags: ['Eggless'],
+      variants: [
+        { label: '1 Pound', price: '₹320' },
+        { label: '2 Pound', price: '₹600' },
+      ],
+    },    
     {
       name: 'Black Forest Cake',
       category: 'Cakes',
@@ -225,9 +239,30 @@ export const site = {
       imageUrl: blackforestCakeImage,
       variants: [
         { label: '1 Pound', price: '₹330' },
-        { label: '2 Pound', price: '₹640' },
+        { label: '2 Pound', price: '₹630' },
       ],
     },
+    {
+      name: 'White Forest Cake',
+      category: 'Cakes',
+      price: '₹330',
+      tags: ['Eggless'],
+      variants: [
+        { label: '1 Pound', price: '₹330' },
+        { label: '2 Pound', price: '₹630' },
+      ],
+    }, 
+    {
+      name: 'Choco Vanilla Cake',
+      category: 'Cakes',
+      price: '₹330',
+      tags: ['Eggless'],
+      imageUrl: chocovanillaCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹350' },
+        { label: '2 Pound', price: '₹650' },
+      ],
+    },       
     {
       name: 'Chocolate Cake',
       category: 'Cakes',
@@ -236,7 +271,7 @@ export const site = {
       imageUrl: chocolateCakeImage,
       variants: [
         { label: '1 Pound', price: '₹350' },
-        { label: '2 Pound', price: '₹680' },
+        { label: '2 Pound', price: '₹650' },
       ],
     },
     {
@@ -247,7 +282,7 @@ export const site = {
       imageUrl: chochochipsCakeImage,
       variants: [
         { label: '1 Pound', price: '₹380' },
-        { label: '2 Pound', price: '₹740' },
+        { label: '2 Pound', price: '₹680' },
       ],
     },
     {
@@ -257,10 +292,21 @@ export const site = {
       tags: ['Special', 'Eggless'],
       imageUrl: chocomarbleCakeImage,
       variants: [
-        { label: '1 Pound', price: '₹420' },
-        { label: '2 Pound', price: '₹820' },
+        { label: '1 Pound', price: '₹450' },
+        { label: '2 Pound', price: '₹850' },
       ],
     },
+    {
+      name: 'Hazelnut Cake',
+      category: 'Cakes',
+      price: '₹420',
+      tags: ['Special', 'Eggless'],
+      imageUrl: hazelnutCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹450' },
+        { label: '2 Pound', price: '₹850' },
+      ],
+    },    
     {
       name: 'Red Velvet Cake',
       category: 'Cakes',
@@ -268,8 +314,8 @@ export const site = {
       tags: ['Special', 'Eggless'],
       imageUrl: redvelvetCakeImage,
       variants: [
-        { label: '1 Pound', price: '₹420' },
-        { label: '2 Pound', price: '₹820' },
+        { label: '1 Pound', price: '₹450' },
+        { label: '2 Pound', price: '₹850' },
       ],
     },
     {
@@ -279,10 +325,32 @@ export const site = {
       tags: ['Special', 'Eggless'],
       imageUrl: truffleCakeImage,
       variants: [
-        { label: '1 Pound', price: '₹420' },
-        { label: '2 Pound', price: '₹820' },
+        { label: '1 Pound', price: '₹450' },
+        { label: '2 Pound', price: '₹850' },
       ],
     },
+    {
+      name: 'Fruit Cake',
+      category: 'Cakes',
+      price: '₹420',
+      tags: ['Custom', 'Eggless'],
+      imageUrl: fruitCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹500' },
+        { label: '2 Pound', price: '₹900' },
+      ],
+    },    
+    {
+      name: 'Rasmalai Cake',
+      category: 'Cakes',
+      price: '₹420',
+      tags: ['Best-Seller', 'Custom', 'Eggless'],
+      imageUrl: rasmalaiCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹500' },
+        { label: '2 Pound', price: '₹900' },
+      ],
+    },      
     {
       name: 'Pineapple Pastry',
       category: 'Pastries',
