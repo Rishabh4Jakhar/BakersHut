@@ -179,6 +179,10 @@ export const site = {
       price: '₹300',
       tags: ['Eggless'],
       imageUrl: pineappleCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹300' },
+        { label: '2 Pound', price: '₹580' },
+      ],
     },
     {
       name: 'Butter Scotch Cake',
@@ -186,6 +190,10 @@ export const site = {
       price: '₹320',
       tags: ['Eggless'],
       imageUrl: butterscotchCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹320' },
+        { label: '2 Pound', price: '₹620' },
+      ],
     },
     {
       name: 'Strawberry Cake',
@@ -193,6 +201,10 @@ export const site = {
       price: '₹320',
       tags: ['Eggless'],
       imageUrl: strawberryCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹320' },
+        { label: '2 Pound', price: '₹620' },
+      ],
     },
     {
       name: 'Blueberry Cake',
@@ -200,6 +212,10 @@ export const site = {
       price: '₹320',
       tags: ['Eggless'],
       imageUrl: blueberryCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹320' },
+        { label: '2 Pound', price: '₹620' },
+      ],
     },
     {
       name: 'Black Forest Cake',
@@ -207,6 +223,10 @@ export const site = {
       price: '₹330',
       tags: ['Eggless'],
       imageUrl: blackforestCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹330' },
+        { label: '2 Pound', price: '₹640' },
+      ],
     },
     {
       name: 'Chocolate Cake',
@@ -214,6 +234,10 @@ export const site = {
       price: '₹350',
       tags: ['Eggless'],
       imageUrl: chocolateCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹350' },
+        { label: '2 Pound', price: '₹680' },
+      ],
     },
     {
       name: 'Chocochips Cake',
@@ -221,6 +245,10 @@ export const site = {
       price: '₹380',
       tags: ['Eggless'],
       imageUrl: chochochipsCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹380' },
+        { label: '2 Pound', price: '₹740' },
+      ],
     },
     {
       name: 'Choco Marble Cake',
@@ -228,6 +256,10 @@ export const site = {
       price: '₹420',
       tags: ['Special', 'Eggless'],
       imageUrl: chocomarbleCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹420' },
+        { label: '2 Pound', price: '₹820' },
+      ],
     },
     {
       name: 'Red Velvet Cake',
@@ -235,6 +267,10 @@ export const site = {
       price: '₹420',
       tags: ['Special', 'Eggless'],
       imageUrl: redvelvetCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹420' },
+        { label: '2 Pound', price: '₹820' },
+      ],
     },
     {
       name: 'Truffle Cake',
@@ -242,6 +278,10 @@ export const site = {
       price: '₹420',
       tags: ['Special', 'Eggless'],
       imageUrl: truffleCakeImage,
+      variants: [
+        { label: '1 Pound', price: '₹420' },
+        { label: '2 Pound', price: '₹820' },
+      ],
     },
     {
       name: 'Pineapple Pastry',
