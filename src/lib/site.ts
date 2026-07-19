@@ -1,3 +1,55 @@
+// Image imports
+
+import type { StaticImageData } from 'next/image';
+import vanillaCakeImage from '@/assets/vanilla_cake.jpeg';
+import butterscotchCakeImage from '@/assets/butterscotch_cake.jpeg';
+import blackforestCakeImage from '@/assets/blackforest_cake.jpeg';
+import chochochipsCakeImage from '@/assets/chocochips_cake.jpeg';
+import chocolateCakeImage from '@/assets/chocolate_cake.jpeg';
+import chocolateDoughnutImage from '@/assets/chocolate_doughnut.jpeg';
+import chocomarbleCakeImage from '@/assets/chocomarble_cake.jpeg';
+import redvelvetCakeImage from '@/assets/redvelvet_cake.jpeg';
+import alooTikkiBurgerImage from '@/assets/alootikki.jpeg';
+import blueberryCakeImage from '@/assets/blueberry_cake.jpeg';
+import butterscotchPastryImage from '@/assets/butterscotch_pastry.jpeg';
+import cheesePaneerSurpriseBurgerImage from '@/assets/cheese_paneer_surprise.jpeg';
+import cheeseSurpriseBurgerImage from '@/assets/cheese_surprise.jpeg';
+import chilliPaneerDryImage from '@/assets/chilli_paneer.jpeg';
+import chilliPotatoImage from '@/assets/chilli_potato.jpeg';
+import chocolatePastryImage from '@/assets/chocolate_pastry.jpeg';
+import cornPowerPizzaImage from '@/assets/corn_power.jpeg';
+import frenchFriesImage from '@/assets/french_fries.jpeg';
+import honeyChilliPotatoImage from '@/assets/honey_chilli_potato.jpeg';
+import italianClassicPizzaImage from '@/assets/italian_classic.jpeg';
+import margrettaPizzaImage from '@/assets/margretta.jpeg';
+import onionCrunchPizzaImage from '@/assets/onion_crunch.jpeg';
+import paneerFunBurgerImage from '@/assets/paneer_fun.jpeg';
+import paneerHakkaNoodlesImage from '@/assets/paneer_hakka.jpeg';
+import paneerMasalaPizzaImage from '@/assets/paneer_masala.jpeg';
+import paneerMomosImage from '@/assets/paneer_momos.jpeg';
+import paneerNoodlesImage from '@/assets/paneer_noodles.jpeg';
+import paneerPunchBurgerImage from '@/assets/paneer_punch.jpeg';
+import paneerSchezwanImages from '@/assets/paneer_schezwan.jpeg';
+import paneerSingaporeNoodlesImage from '@/assets/paneer_singapore_noodles.jpeg';
+import periPeriFriesImage from '@/assets/peri_peri.jpeg';
+import pineappleCakeImage from '@/assets/pineapple_cake.jpeg';
+import pineapplePastryImage from '@/assets/pineapple_pastry.jpeg';
+import redVelvetPastryImage from '@/assets/redvelvet_pastry.jpeg';
+import springRollImage from '@/assets/spring_roll.jpeg';
+import strawberryCakeImage from '@/assets/strawberry_cake.jpeg';
+import trufflePastryImage from '@/assets/truffle_pastry.jpeg';
+import truffleCakeImage from '@/assets/truffle_cake.jpeg';
+import vegChilliGarlicNoodlesImage from '@/assets/veg_chilli_garlic.jpeg';
+import vegDelightPizzaImage from '@/assets/veg_delight.jpeg';
+import vegHakkaNoodlesImage from '@/assets/veg_hakka.jpeg';
+import vegKickBurgerImage from '@/assets/veg_kick.jpeg';
+import vegManchurianImage from '@/assets/veg_manchu.jpeg';
+import vegMomosImage from '@/assets/veg_momos.jpeg';
+import vegNoodlesImage from '@/assets/veg_noodles.jpeg';
+import vegPowerPizzaImage from '@/assets/veg_power.jpeg';
+import vegSchezwanNoodlesImage from '@/assets/veg_schezwan.jpeg';
+import vegSingaporeNoodlesImage from '@/assets/veg_singapore_noodles.jpeg';
+
 export type MenuVariant = {
   label: string;
   price: string;
@@ -9,7 +61,7 @@ export type MenuItem = {
   price: string;
   tags: string[];
   // Optional: add a local path such as '/images/vanilla-cake.jpg' or an approved remote URL.
-  imageUrl?: string;
+  imageUrl?: string | StaticImageData;
   // Optional: each choice gets its own price, for example 1 Pound / 2 Pound.
   variants?: MenuVariant[];
 };
@@ -107,6 +159,7 @@ export const site = {
     {
       name: 'Vanilla Cake',
       category: 'Cakes',
+      imageUrl: vanillaCakeImage,
       price: '₹270',
       tags: ['Eggless'],
       variants: [
@@ -125,6 +178,7 @@ export const site = {
       category: 'Cakes',
       price: '₹320',
       tags: ['Eggless'],
+      imageUrl: butterscotchCakeImage,
     },
     {
       name: 'Strawberry Cake',
@@ -143,30 +197,35 @@ export const site = {
       category: 'Cakes',
       price: '₹330',
       tags: ['Eggless'],
+      imageUrl: blackforestCakeImage,
     },
     {
       name: 'Chocolate Cake',
       category: 'Cakes',
       price: '₹350',
       tags: ['Eggless'],
+      imageUrl: chocolateCakeImage,
     },
     {
       name: 'Chocochips Cake',
       category: 'Cakes',
       price: '₹380',
       tags: ['Eggless'],
+      imageUrl: chochochipsCakeImage,
     },
     {
       name: 'Choco Marble Cake',
       category: 'Cakes',
       price: '₹420',
       tags: ['Special', 'Eggless'],
+      imageUrl: chocomarbleCakeImage,
     },
     {
       name: 'Red Velvet Cake',
       category: 'Cakes',
       price: '₹420',
       tags: ['Special', 'Eggless'],
+      imageUrl: redvelvetCakeImage,
     },
     {
       name: 'Truffle Cake',
@@ -701,6 +760,7 @@ export const site = {
       category: 'Dessert',
       price: '₹50',
       tags: ['1 Piece'],
+      imageUrl: chocolateDoughnutImage,
     },                                                                                    
   ],
   gallery: [
