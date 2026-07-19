@@ -9,6 +9,14 @@ export function Footer() {
         <div>
           <p className="font-display text-2xl text-[#321112]">Bakers Hut</p>
           <p className="mt-3 max-w-sm leading-6">{site.tagline}</p>
+          <br />
+          <br />
+          <p className="text-[#6e3d34]">
+            Made with &lt;3 by{' '}
+            <a href="https://github.com/rishabh4jakhar" target="_blank" rel="noreferrer" className="text-[#8e2826] hover:text-[#9f2323]">
+              Rishabh
+            </a>
+          </p>
         </div>
         <div>
           <p className="font-semibold text-[#321112]">Explore</p>
