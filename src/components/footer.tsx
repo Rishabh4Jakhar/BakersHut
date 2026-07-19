@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Instagram } from 'lucide-react';
 import { site } from '@/lib/site';
 
 export function Footer() {
@@ -23,6 +24,15 @@ export function Footer() {
           <p className="font-semibold text-[#321112]">Contact</p>
           <p className="mt-3 leading-6">{site.address}</p>
           <p className="mt-2">{site.phone}</p>
+          <a
+            href={site.instagram}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex items-center gap-2 font-semibold text-[#8e2826] transition hover:text-[#9f2323]"
+          >
+            <Instagram className="h-4 w-4" aria-hidden="true" />
+            Follow us on Instagram
+          </a>
         </div>
       </div>
     </footer>
