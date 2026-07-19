@@ -80,14 +80,14 @@ export function MenuSection() {
                 </div>
               </div>
             ) : null}
-            <div className="relative mt-5 flex h-40 items-center justify-center overflow-hidden rounded-[1.25rem] border border-dashed border-[#dfb1a8] bg-[#fff1eb]">
+            <div className="relative mt-5 flex h-48 items-center justify-center overflow-hidden rounded-[1.25rem] border border-dashed border-[#dfb1a8] bg-[#fff1eb] sm:h-52">
               {item.imageUrl ? (
                 <Image
                   src={item.imageUrl}
                   alt={item.name}
                   fill
                   sizes="(max-width: 767px) calc(100vw - 3rem), (max-width: 1279px) calc(50vw - 3rem), 360px"
-                  className="object-cover"
+                  className="object-contain p-2"
                 />
               ) : (
                 <div className="flex flex-col items-center gap-2 px-4 text-center text-[#8e2826]">

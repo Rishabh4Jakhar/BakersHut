@@ -51,7 +51,10 @@ import vegPowerPizzaImage from '@/assets/veg_power.jpeg';
 import vegSandwichImage from '@/assets/veg_sandwich.jpeg';
 import vegSchezwanNoodlesImage from '@/assets/veg_schezwan.jpeg';
 import vegSingaporeNoodlesImage from '@/assets/veg_singapore_noodles.jpeg';
-
+import paneerFriedRiceImage from '@/assets/paneer_fried_rice.jpeg';
+import paneerSingaporeFriedRiceImage from '@/assets/paneer_singapore_rice.jpeg';
+import vegFriedRiceImage from '@/assets/veg_fried_rice.jpeg';
+import vegSingaporeFriedRiceImage from '@/assets/veg_singapore_rice.jpeg';
 
 export type MenuVariant = {
   label: string;
@@ -602,6 +605,7 @@ export const site = {
         { label: 'Half', price: '₹60' },
         { label: 'Full', price: '₹100' },
       ],
+      imageUrl: vegFriedRiceImage,
     },             
     {
       name: 'Paneer Fried Rice',
@@ -612,6 +616,7 @@ export const site = {
         { label: 'Half', price: '₹80' },
         { label: 'Full', price: '₹120' },
       ],
+      imageUrl: paneerFriedRiceImage,
     },            
     {
       name: 'Singapuri Fried Rice Veg',
@@ -622,6 +627,7 @@ export const site = {
         { label: 'Half', price: '₹80' },
         { label: 'Full', price: '₹120' },
       ],
+      imageUrl: vegSingaporeFriedRiceImage,
     },           
     {
       name: 'Singapuri Fried Rice Paneer',
@@ -632,6 +638,7 @@ export const site = {
         { label: 'Half', price: '₹90' },
         { label: 'Full', price: '₹130' },
       ],
+      imageUrl: paneerSingaporeFriedRiceImage,
     },            
     {
       name: 'Schezwan Fried Rice Veg',
