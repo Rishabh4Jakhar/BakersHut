@@ -59,6 +59,7 @@ import chocovanillaCakeImage from '@/assets/chocovanilla_cake.jpeg';
 import fruitCakeImage from '@/assets/fruit_cake.jpeg';
 import hazelnutCakeImage from '@/assets/hazelnut_cake.jpeg';
 import rasmalaiCakeImage from '@/assets/rasmalai_cake.jpeg';
+import storefrontImage from '@/assets/storefront.jpg';
 
 export type MenuVariant = {
   label: string;
@@ -80,7 +81,7 @@ export const site = {
   name: 'Bakers Hut',
   tagline: 'Neighborhood bakery in Jharoda Kalan for eggless cakes, breads, and savory bites.',
   description:
-    'Bakers Hut is a bakery and cake shop in New Delhi at 342, New Vision Colony, C-Block, Naveen Palace, Jharoda Kalan, New Delhi, Delhi 110072.',
+    'Bakers Hut is a bakery and cake shop in New Delhi, located at 342, New Vision Colony, C-Block, Naveen Palace, Jharoda Kalan, New Delhi, Delhi 110072.',
   phone: '+91 9818579132',
   whatsapp: '919818579132',
   address: '342, New Vision Colony, C-Block, Naveen Palace, Jharoda Kalan, New Delhi, Delhi, 110072',
@@ -90,8 +91,8 @@ export const site = {
   instagram: 'https://www.instagram.com/bakershut72/',
   // Replace these URLs with files from /public whenever your bakery photos are ready.
   images: {
-    storefront:
-      'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=85',
+    storefront: storefrontImage,
+      //'https://lh3.googleusercontent.com/grass-cs/ACvplmNVYANbUe03iCqJCE9_QuIJShGGMkJuzSd13bXgmpF06fBzWXQRXxdB9TFDC4uxclge9w9gBcGXz_oylsTWqz8vxFd4Gk9XwaFxWNBIXYlmsr9o4Z29-eqfmL7_yq9oCv0zkZtJ=w289-h312-n-k-no',
     cake:
       'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80',
     pastry:
@@ -126,31 +127,25 @@ export const site = {
   ],
   about: {
     intro:
-      'Bakers Hut is built like a real neighborhood bakery: warm counter service, dependable baking, and a menu that balances celebration orders with everyday snacks.',
+      'Bakers Hut is a real neighborhood bakery: warm counter service, dependable baking, and a menu that balances celebration orders with everyday snacks.',
     story:
-      'The shop serves families who need a birthday cake, office folks picking up snacks on the way home, and regulars who want fresh bread without a long wait.',
+      'The shop serves families who need a birthday cake, office folks picking up snacks on the way home, and regulars who want something fresh and spicy without a long wait.',
     focus:
       'The website is designed to feel like the storefront itself - practical, clear, and friendly - while still looking polished on mobile and desktop.',
-    features: ['Eggless options', 'Custom cakes', 'Fresh bread', 'Savories and snacks'],
+    features: ['Eggless Cakes', 'Custom cakes', 'Fast Food', 'Ice Creams', 'Party Hall', 'Delivery Support'],
   },
   featuredProducts: [
     {
-      name: 'Signature Celebration Cake',
+      name: 'Rasmalai Cake',
       category: 'Cakes',
-      price: 'From ₹999',
-      description: 'Eggless celebration cakes with message cards, simple decoration, and same-day planning support.',
+      price: 'From ₹500',
+      description: 'A delicious eggless cake made with fresh rasmalai and topped with nuts, best-seller and loved by customers.',
     },
     {
-      name: 'Fresh Bread Basket',
-      category: 'Bread',
-      price: 'From ₹60',
-      description: 'Daily bread selection for breakfast, tea-time, and family dinners.',
-    },
-    {
-      name: 'Savory Snack Mix',
-      category: 'Snacks',
-      price: 'From ₹70',
-      description: 'Puffs, sandwiches, pizzas, and burger-style savory bites for quick pickup.',
+      name: 'Italian Classic Pizza',
+      category: 'Pizzas',
+      price: 'From ₹120',
+      description: 'A delicious pizza made with onion, corn, olive, paprika and a crispy crust.',
     },
   ],
   menuCategories: [

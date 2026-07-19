@@ -11,13 +11,13 @@ export default function HomePage() {
   return (
     <div className="pb-20">
       <section id="home" className="scroll-mt-24 bg-hero-gradient">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 lg:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:gap-12 lg:px-8 lg:py-24">
           <div className="min-w-0 flex flex-col justify-center space-y-6 animate-fadeUp">
             <p className="inline-flex w-fit rounded-full bg-[#ffe8e2] px-4 py-2 text-sm font-semibold text-[#8e2826] ring-1 ring-[#dfb1a8]">
-              Bakers Hut | Red and cream bakery storefront
+              Bakers Hut | Bakery and Cake Shop
             </p>
             <h1 className="font-display text-5xl leading-none text-[#321112] md:text-6xl lg:text-7xl text-balance">
-              Warm bread, eggless cakes, and savory bites made for the neighborhood.
+              Cakes, Pizzas, Burgers, and More for Every Occasion
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-[#6d5335]">{site.description}</p>
             <div className="flex flex-wrap gap-3">
@@ -37,40 +37,38 @@ export default function HomePage() {
           </div>
           <div className="relative min-w-0 self-start px-2 pb-2 sm:px-3 sm:pb-3 lg:self-center">
             <div className="absolute inset-x-2 inset-y-2 translate-x-2 translate-y-2 rounded-[2rem] bg-[#d15c53] sm:inset-x-3 sm:inset-y-3 sm:translate-x-3 sm:translate-y-3" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-[#dfb1a8] bg-[#fffaf8] p-3 shadow-glow sm:p-5">
+            <div className="relative overflow-hidden rounded-[2rem] border border-[#dfb1a8] bg-[#fffaf8] p-3 shadow-glow sm:p-5 lg:min-h-[620px]">
               <div className="grid gap-4 min-[480px]:grid-cols-2">
-                <div className="min-w-0 rounded-[1.5rem] bg-[#ffe7df] p-4 sm:p-5">
+                <div className="min-w-0 rounded-[1.5rem] bg-[#ffe7df] p-4 min-[480px]:col-span-2 sm:p-5 lg:flex lg:min-h-[400px] lg:flex-col">
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8e2826]">Storefront feeling</p>
-                  <div className="relative mt-4 aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-[#dfb1a8] bg-[#f3c1b5]">
+                  <div className="relative mt-4 aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-[#dfb1a8] bg-[#f3c1b5] min-[480px]:aspect-[16/7] lg:aspect-auto lg:flex-1">
                     <Image
                       src={site.images.storefront}
                       alt="Bakery storefront placeholder"
                       fill
                       priority
-                      sizes="(max-width: 479px) calc(100vw - 4.5rem), (max-width: 1024px) 42vw, 360px"
-                      className="object-cover"
+                      sizes="(max-width: 479px) calc(100vw - 4.5rem), (max-width: 1024px) calc(100vw - 6rem), 600px"
+                      
                     />
                   </div>
                 </div>
-                <div className="min-w-0 flex flex-col gap-4">
-                  <div className="rounded-[1.5rem] bg-[#fff1eb] p-4">
-                    <p className="text-sm font-semibold text-[#321112]">Opening hours</p>
-                    <div className="mt-3 space-y-2 text-sm text-[#6e3d34]">
-                      {site.hours.map((slot) => (
-                        <div key={slot.day} className="flex items-center justify-between gap-3">
-                          <span>{slot.day}</span>
-                          <span>{slot.time}</span>
-                        </div>
-                      ))}
-                    </div>
+                <div className="min-w-0 rounded-[1.5rem] bg-[#fff1eb] p-4">
+                  <p className="text-sm font-semibold text-[#321112]">Opening hours</p>
+                  <div className="mt-3 space-y-2 text-sm text-[#6e3d34]">
+                    {site.hours.map((slot) => (
+                      <div key={slot.day} className="flex items-center justify-between gap-3">
+                        <span>{slot.day}</span>
+                        <span>{slot.time}</span>
+                      </div>
+                    ))}
                   </div>
-                  <div className="rounded-[1.5rem] bg-[#8e2826] p-4 text-white">
-                    <p className="font-semibold">Quick actions</p>
-                    <div className="mt-4 space-y-3 text-sm text-white/86">
-                      <p className="flex items-center gap-2"><Phone className="h-4 w-4" /> Call: {site.phone}</p>
-                      <p className="flex items-center gap-2"><MessageCircle className="h-4 w-4" /> WhatsApp ordering</p>
-                      <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Google Maps directions</p>
-                    </div>
+                </div>
+                <div className="min-w-0 rounded-[1.5rem] bg-[#8e2826] p-4 text-white">
+                  <p className="font-semibold">Quick actions</p>
+                  <div className="mt-4 space-y-3 text-sm text-white/86">
+                    <p className="flex items-center gap-2"><Phone className="h-4 w-4" /> Call: {site.phone}</p>
+                    <p className="flex items-center gap-2"><MessageCircle className="h-4 w-4" /> WhatsApp ordering</p>
+                    <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Google Maps directions</p>
                   </div>
                 </div>
               </div>
@@ -115,7 +113,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Menu"
-            title="Fresh breads, cakes, pastries, and savory bites"
+            title="Fresh cakes, pizzas, burgers and much more!"
             description="Browse the menu by category to get straight to what you want."
           />
           <MenuSection />
