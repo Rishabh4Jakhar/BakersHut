@@ -16,6 +16,28 @@ const body = Manrope({
   variable: '--font-body',
 });
 
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Bakery',
+  name: site.name,
+  description: site.tagline,
+  image: site.images.storefront.src,
+  telephone: site.phone,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '342, New Vision Colony, C-Block, Naveen Palace, Jharoda Kalan',
+    addressLocality: 'New Delhi',
+    addressRegion: 'Delhi',
+    postalCode: '110072',
+    addressCountry: 'IN',
+  },
+  openingHours: 'Mo-Su 10:00-22:00',
+  priceRange: '₹₹',
+  servesCuisine: ['Bakery', 'Cakes', 'Pizza', 'Fast Food'],
+  sameAs: [site.instagram],
+  hasMap: site.mapDirectionsUrl,
+};
+
 export const metadata: Metadata = {
   title: {
     default: 'Bakers Hut',
@@ -24,7 +46,27 @@ export const metadata: Metadata = {
   description: `${site.tagline} ${site.description}`,
   metadataBase: new URL('https://bakers-hut.example'),
   applicationName: site.name,
-  keywords: ['Bakers Hut', 'bakery', 'cakes', 'eggless cakes', 'pizza', 'Jharoda Kalan', 'New Delhi'],
+  keywords: [
+    'Bakers Hut',
+    'bakery in Jharoda Kalan',
+    'cake shop in New Delhi',
+    'eggless cakes',
+    'birthday cakes',
+    'custom cakes',
+    'pizza',
+    'burgers',
+    'bakery delivery',
+    'party hall',
+    'fast food',
+    'ice creams',
+    'snacks',
+  ],
+  category: 'Bakery',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   icons: {
     icon: [{ url: site.images.storefront.src, type: 'image/jpeg' }],
     apple: [{ url: site.images.storefront.src, type: 'image/jpeg' }],
@@ -61,6 +103,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body suppressHydrationWarning className={`${display.variable} ${body.variable} bg-background text-foreground antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema).replace(/</g, '\\u003c') }}
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />

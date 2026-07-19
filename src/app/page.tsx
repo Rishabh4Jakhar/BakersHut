@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ArrowRight, Clock3, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { ArrowRight, Clock3, Instagram, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { Button } from '@/components/button';
 import { GalleryCarousel } from '@/components/gallery-carousel';
 import { MenuSection } from '@/components/menu-section';
@@ -83,7 +83,7 @@ export default function HomePage() {
           title="A neighborhood bakery with a simple story and a clear menu"
           description={site.about.intro}
         />
-        <div className="mt-8 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="mt-8 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="rounded-[2rem] border border-[#dfb1a8] bg-white p-6 shadow-soft">
             <p className="font-display text-3xl text-[#321112]">Family story</p>
             <p className="mt-4 leading-8 text-[#6e3d34]">{site.about.story}</p>
@@ -96,9 +96,18 @@ export default function HomePage() {
             </div>
             <p className="mt-6 leading-7 text-[#6e3d34]">{site.about.focus}</p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2">
             {site.featuredProducts.map((product) => (
               <article key={product.name} className="rounded-[1.75rem] border border-[#dfb1a8] bg-[#fffaf8] p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-glow">
+                <div className="relative flex h-52 items-center justify-center overflow-hidden rounded-[1.25rem] border border-dashed border-[#dfb1a8] bg-[#fff1eb]">
+                  <Image
+                    src={product.imageUrl}
+                    alt={product.name}
+                    fill
+                    sizes="(max-width: 639px) calc(100vw - 3rem), 420px"
+                    className="object-contain p-2"
+                  />
+                </div>
                 <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#8e2826]">{product.category}</p>
                 <h3 className="mt-3 font-display text-3xl text-[#321112]">{product.name}</h3>
                 <p className="mt-3 leading-7 text-[#6e3d34]">{product.description}</p>
@@ -129,6 +138,23 @@ export default function HomePage() {
         <div className="mt-8">
           <GalleryCarousel />
         </div>
+        <a
+          href={site.instagram}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-6 flex items-center justify-between gap-4 rounded-[1.5rem] border border-[#dfb1a8] bg-[#fff1eb] p-5 text-[#321112] transition hover:bg-[#ffe7df]"
+        >
+          <span className="flex min-w-0 items-center gap-3">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#9f2323] text-white">
+              <Instagram className="h-5 w-5" aria-hidden="true" />
+            </span>
+            <span>
+              <span className="block font-semibold">See more from Bakers Hut on Instagram</span>
+              <span className="mt-1 block text-sm text-[#6e3d34]">Follow for cakes, fresh bakes, and shop updates.</span>
+            </span>
+          </span>
+          <span className="shrink-0 text-sm font-semibold text-[#9f2323]">Open profile <ArrowRight className="ml-1 inline h-4 w-4" /></span>
+        </a>
       </section>
 
       <section id="reviews" className="scroll-mt-24 bg-[#fff8f4]">
